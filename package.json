@@ -21,9 +21,15 @@
   },
   "scripts": {
     "test": "node test.js",
-    "lint": "eslint --ext js lib "
+    "lint": "eslint --ext js lib ",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "engines": {
     "node": ">=4.x"
+  },
+  "snyk": true,
+  "dependencies": {
+    "@snyk/protect": "latest"
   }
 }
